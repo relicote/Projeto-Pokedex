@@ -61,7 +61,7 @@
 
 /* QUERIES */
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 332px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;   
     }
