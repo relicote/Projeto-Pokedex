@@ -6,17 +6,11 @@ const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 // Assincrono (um processo executado que a resposta não é imediata)
 
 fetch(url)
-    .then(function (response) {
-        return response.json()
-    })
+    .then((response) => response.json())
 
-    .then(function (jsonBody) {
-        console.log(jsonBody)
-    })
+    .then((jsonBody) => console.log(jsonBody))
 
-    .catch(function (error) {
-        console.log(error)
-    })
+    .catch((error)   => console.log(error))
 
     .finally(function () {
         console.log('Requisicão conluída!')
