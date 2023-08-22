@@ -36,7 +36,7 @@
  background-color: #a040a0 ;   
 }
 .fighting{
- background-color: #bbf3029 ;   
+ background-color: #bbf30290;   
 }
 .psychic {
  background-color: #f65687 ;   
@@ -81,6 +81,7 @@
 }
 
 .pokemon .name{
+    text-transform: capitalize;
     color: #fff;
     margin-bottom: 0.25rem;
 }
