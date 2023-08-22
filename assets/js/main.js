@@ -24,23 +24,33 @@ function convertPokemonToHtml(pokemon) {
         `
 }
 
-        const pokemonList = document.getElementById('pokemonList')
+const pokemonList = document.getElementById('pokemonList')
+
+pokeApi.getPokemons().then((pokemons = []) => {
+    const newHtml = pokemons.map(convertPokemonToHtml).join('')
+    pokemonList.innerHTML += newHtml
+})
 
 
-fetch(url)
+// pokeApi.getPokemons().then((pokemons) => {
+//     const listItems = []
 
-    .then((response) => response.json()) //Recebendo resposta e convertendo para Json
-    .then((jsonBody) => jsonBody.results) //convertendo o json em uma variavel
-    .then((pokemons) => {
+//     // pokemons.map()
+
+//     for (let i = 0; i < pokemons.length; i++) {
+//         const pokemon = pokemons[i];
+
+//         //Convertendo a lista de pokemons (concatenados a API) em uma lista de HTML
+//         listItems.push(convertPokemonToHtml(pokemon)) 
+//     }
+
+//     console.log(listItems)
+             
+// })
+
+
+
+    
         
-        for (let i = 0; i < pokemons.length; i++) {
-            const pokemon = pokemons[i];
-            pokemonList.innerHTML += convertPokemonToHtml(pokemon)
+        
 
-
-            // document.getElementsByClassName('pokemons')
-            
-        }
-
-    })
-    .catch((error) => console.log(error)) 
